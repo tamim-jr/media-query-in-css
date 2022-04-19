@@ -1,0 +1,134 @@
+*{
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+     font-family: sans-serif;
+     font-size: 30px; 
+}
+.container{
+    border: 1px solid black;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+/* 
+    display: grid;
+    place-content: center; */
+}
+.devices{
+    color: white;
+    font-size: 25px;
+}
+.devices img{
+    width: 350px;
+}
+#size{
+    color: rgb(255, 255, 255);
+}
+/* -------Media-wueried----- */
+
+/* X-Small	None	<576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px */
+
+/* -----Desktop first approach---- */
+/* desktop>laptop>tablet>mobile */
+
+/* @media screen and (min-width: 1200px) {
+    .container{
+        background-color: rgb(235, 82, 12);
+    }
+} */
+@media screen and (min-width: 1200px) {
+    .container{
+        background-color: rgb(60, 28, 241);
+    }
+    .laptop,  .tablet, .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        background-color: rgb(221, 13, 13);
+    }
+    .desktop, .tablet, .mobile{
+        display: none;
+    }
+    .laptop{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .container{
+        background-color: rgb(3, 172, 40);
+    }
+    .desktop, .laptop, .mobile{
+        display: none;
+    }
+    .tablet{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .container{
+        background-color: rgb(240, 94, 10);
+    }
+    .desktop, .laptop, .tablet{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+
+/* -----Mobile first approach---- */
+/* mobile>tablet>laptop>desktop */
+/* 
+@media screen and (min-width: 0px){
+    .container{
+        background-color: rgb(10, 167, 44);
+    }
+}
+
+@media screen and (min-width: 576px){
+    .container{
+        background-color: rgb(10, 167, 44);
+    }
+}
+
+@media screen and (min-width:768px){
+    .container{
+        background-color: rgb(238, 223, 12);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container{
+        background-color: rgb(221, 13, 13);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        background-color: rgb(60, 28, 241);
+    }
+} */
+
+
+
